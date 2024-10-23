@@ -17,6 +17,8 @@ let showDebris = false;
 
 function setup() {
   createCanvas(800, 500);
+  canvas.id("p5-canvas-container")
+  canvas.parent("p5-canvas-container")
   colorMode(HSB);
   groupX = width / 2;
   groupY = height / 2;
