@@ -1,3 +1,10 @@
+let x=[]
+let y=[]
+let p=[]
+let m=[]
+let n=[]
+let q=[]
+
 let s = 30;
 let groupX;
 let groupY;
@@ -9,41 +16,39 @@ let debrisY;
 let showDebris = false;
 
 function setup() {
-  let canvas = createCanvas(800, 500);
-  canvas.id("p5-canvas")
-  canvas.parent("p5-canvas-container")
+  createCanvas(800, 500);
   colorMode(HSB);
   groupX = width / 2;
   groupY = height / 2;
+  
+  for (let i = 0; i < 50; i++) {
+    x[i] = random(width/4);
+    y[i] = random(height);
+    p[i] = random(10, 40);
+    
+  }
+  
+    for (let i = 0; i < 90; i++) {
+    m[i]=random((3 * width) / 5, width);
+    n[i] = height - random(150, 400);
+    q[i] = random(10, 50);
+    
+  }
 }
 
 function draw() {
-  background(260, 100, 70);
+  background(210, 100, 80);
 
-  for (let i = 0; i < 10; i++) {
-    let x1 = random(width / 5);
-    let y1 = height - random(20, 200);
-    let r = random(2, 60);
-    stroke(random(0, 360), random(0, 100), random(0, 100));
-    strokeWeight(random(3, 10));
-    fill(random(340, 360), 65, random(97, 140));
-    square(x1, y1, r);
+  for (let i = 0; i < 60; i++){
+    drawReef(x[i],y[i],p[i])
+    drawReef(m[i],n[i],q[i])
   }
-
-  for (let i = 0; i < 20; i++) {
-    let x1 = random((3 * width) / 5, width);
-    let y1 = height - random(40, 400);
-    let r = random(10, 70);
-    stroke(random(255), random(255), random(255));
-    strokeWeight(random(3, 10));
-    fill(random(340, 360), 65, random(97, 140));
-    square(x1, y1, r);
-  }
-
-  for (let i = 0; i < 30; i++) {
+  
+ 
+  for (let i = 0; i < 100; i++) {
     let x3 = random(200, 300);
     let y3 = random(height);
-    r1 = random(1, 100);
+    r1 = random(1, 10);
     noFill();
     stroke(random(85, 140), random(50, 100), 55);
     strokeWeight(random(0, 5));
@@ -56,7 +61,7 @@ function draw() {
     r2 = random(1, 50);
     noFill();
     stroke(360);
-    strokeWeight(1, 10);
+    strokeWeight(random(1, 10));
     circle(x4, y4, r2);
   }
 
@@ -170,4 +175,13 @@ function drawDebris() {
     debrisX + random(-40, 40),
     debrisY + random(-40, 40)
   );
+}
+
+function drawReef(x,y,r){
+  
+  stroke(0)
+  strokeWeight(random(1,5));
+  fill(random(), random(90), random(97, 140));
+  square(x,y,r)
+  
 }
