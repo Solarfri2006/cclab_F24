@@ -1,62 +1,82 @@
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neon_Glowlet</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>Neon Glowlet</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
     <script src="library/p5.js"></script>
 
-</head> 
-<body>
+</head>
 
+<body>
+    <!-- title -->
     <div id="title-wrapper">
-        <h1>Neon Glowlet</h1>
+        <h1 class="headline black">NEON GLOWLET</h1>
     </div>
 
+    <!-- main content -->
     <div id="main-wrapper">
-        <div id="p5_canvas_container">
-            <!-- we will add an image -->
+        <div id="p5-canvas-container">
+            <!-- This is where your p5 sketch will be appended and appear! -->
         </div>
-        <div class="two_columns">
+        <div class="two-columns">
             <div class="left">
-                <h3> Scientific Name</h3>
-                <p>The name of my <br>creature is <strong><i>Neon Glowlet</i></strong>.</p>
-                <h3>Discovered by/at:</h3>
-                <p>Hayley on Tuesday Oct.15</p>
+                <h3 class="red">Scientific Name:</h3>
+                <p>Neon Glowlet</p>
+
+                <h3 class="red">Discovered by / in:</h3>
+                <p>Dr.Hayley Yang, the year 3024.</p>
+
+                <h3 class="green">Family:</h3>
+                <p>Aquavioid family. This is named by scientists to refer to a family of artificially synthesized, high-tech BioProbes which intersect the bird species and the aquatic species. 
+                </p>
             </div>
             <div class="right">
-                <h3>Family:</h3>
+                <h3 class="green">Habitat:</h3>
+                <p>Deep sea. Depth range 200~2000 m. Coral reef and deep-sea algae.</p>
 
-                <h3>Habitat:</h3>
-            
-                <h3>Appearance:</h3>
-            
-                <h3>Key characteristics:</h3>
+                <h3 class="green">Appearance:</h3>
+                <p> </p>
+
+                <h3 class="green">Key Characteristics:</h3>
                 <ul>
-                    <li>Night vision</li>
-                    <li>Glides around like a jellyfish</li>
-                    <li>Luminescent like a jellyfish</li>
+                    <li>Luminescent and irridescent in deep-sea.</li>
+                    <li>Navigates underwater by flapping its wings.</li>
+                    <li>Glides around like a jellyfish.</li>
+                    <li>Swoops when hunting for food.</li>
+                    <li>Feeds on harmful sea debris.</li>
+                    <li>Tracks things as a deep sea probe.</li>
                 </ul>
             </div>
         </div>
-        <div class="one_column">
-            <p>what we know so far about this creature: blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah </p>
+        <div class="one-column">
+            <p>
+                <span class="yellow">What we know so far about Neon Glowlet?</span>
+                Our planet's oceans were becoming increasingly polluted with its acidification process intensifying and marine litter overflowing. Confronted with this senario, a group of Avant-garde scientists turned to developing bioprobes as alternatives for traditional probes. Their idea was to integrate different species' evolutionary advantages and high-tech to create probes with comprehensive functionality.
+                Neon Glowlet is an owlet whose gene has been modified to include certain gene segments extracted from deep-sea jellyfish, allowing it to possess some jellyfish traits along with its own owl traits, such as being able to morph into a kaleidoscope of colors.In addition to its powerful recombinant genes, it is also equipped with a high-tech microchip, allowing it to function as a highly efficient probe accustomed to deep-sea surroundings.
+                <br>
+                <span class="yellow">Guidelines for human interaction with this creature:</span>
+                <ul>
+                    <li>When there's no movement from the audience, Neon glides around on its own accord.</li>
+                    <li>Dragging the mouse continuously simulates Neon tracking something underwater (it follows the mouse smoothly).</li>
+                    <li>Pressing any key would generate a random piece of debris in the water, after which Neon will swoop over and eat it.</li>
+                </ul>
+            </p>
         </div>
-
     </div>
-    <div id="footer"></div>
-    <div id="home"></div>
 
+    <!-- Footer -->
+    <div id="footer" class="black">
+        <p>A CCLab project made by Hayley Yang in Fall24</p>
+    </div>
 
-    
-    
+    <!-- Home: Link back to the ATLAS page-->
+    <div id="home">
+        <a href="https://cclab.work/atlas">Back to the ATLAS</a>
+    </div>
 
-
-
-    <hr>
-
-    <p>A CClab project made by Hayley in Fall 24</p>
-    <a href="https://cclab.work/atlas">Go back to Biodiversity Atlas</a>
+    <!-- Include your sketch.js file here -->
+    <script src="script.js" type="text/javascript"> </script>
 </body>
+
 </html>
