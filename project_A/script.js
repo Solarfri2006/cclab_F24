@@ -5,7 +5,6 @@ let m=[]
 let n=[]
 let q=[]
 
-let s = 30;
 let groupX;
 let groupY;
 let wingAngle = 0;
@@ -72,11 +71,10 @@ function draw() {
     showDebris = true;
   }
 
-  if (showDebris) {
-    drawDebris();
-  }
+
 
   if (showDebris) {
+    drawDebris();
     let dx = debrisX - groupX;
     let dy = debrisY - groupY;
     let distDN = dist(debrisX, debrisY, groupX, groupY);
