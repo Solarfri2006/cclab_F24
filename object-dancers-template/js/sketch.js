@@ -44,6 +44,8 @@ class Skelekat {
     this.armAngle1 = 0;
     this.armAngle2 = 0;
     this.noiseVal = 0;
+    this.legAngle1 = 0;
+    this.legAngle2 = 0;
     
     // this.mic = new p5.AudioIn();
     // this.mic.start();
