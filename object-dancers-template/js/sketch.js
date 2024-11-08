@@ -84,7 +84,7 @@ class Skelekat {
     // ⬇️ draw your dancer from here ⬇️
     colorMode(HSB);
     
-    //draw the limbs
+    //draw the ribs
     
     for (let i=0; i<40; i+=10){
       let h =2*i + i*sin(frameCount*0.1)
