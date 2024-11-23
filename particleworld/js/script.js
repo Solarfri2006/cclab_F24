@@ -20,7 +20,7 @@ function draw() {
     spiders[i].update();
     spiders[i].display();
     spiders[i].checkPosition()
-    for (let j=spiders.length - 1; j >= 0; j--){
+    for (let j=spiders.length - 1; j >= 0; j--){// use a reverse loop
       if (spiders[i].break == true){
         spiders.splice(i,1)
         spiders.push(new Spider(random(width),0))
@@ -45,7 +45,6 @@ class Spider {
   // methods (functions): particle's behaviors
   update() {
     // (add) 
-
     this.y += this.speed
   }
   display() {
