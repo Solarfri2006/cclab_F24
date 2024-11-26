@@ -1,0 +1,195 @@
+
+body {
+    background-color:black;
+}
+
+.title-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding:50px;
+    gap: 0px;
+}
+.titlebox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    margin:10px;
+}
+.box-1 {
+    width: 50px;
+    height: 50px;
+    font-family: "Lobster", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 40px;
+    rotate: 30deg;
+    color: #FC8F54;
+    background-color:#FDE7BB;
+}  
+.box-2{
+    width:40px;
+    text-align: center;
+    font-family: "Sevillana", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color:#E5E3D4;
+    background-color: #1C325B;
+}
+.box-3{
+    width:50px;
+    font-family: "Lacquer", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    rotate: 20deg;
+    color:#E5E3D4;
+    background-color:#640D5F;
+}
+.box-4{
+    width:40px;
+    background-color: transparent
+}
+.box-5{
+    height: 110px;
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    rotate:-10deg;
+    color:#EB5B00;
+    background-color:#47663B;
+}
+.box-6{
+    width:50px;
+    height:60px;
+    font-family: "Smokum", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 80px;
+    rotate:-15deg;
+    color:#E5E3D4;
+    background-color:#B692C2;
+}
+.box-7{
+    width:50px;
+    height:60px;
+    font-family: "Smokum", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 80px;
+    color:#FFF078;
+    background-color: #FFB1B1;
+}
+.box-8{
+    height:100px;
+    font-family: "Ewert", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 90px;
+    rotate:10deg;
+    color:#E5E3D4;
+    background-color: #403170;
+}
+.box-9{
+    width:40px;
+    background-color:transparent
+}
+.box-10{
+    height:130px;
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 110px;
+    rotate:20deg;
+    color:#1e4c0b;
+    background-color: #e64d11;
+}
+.box-11{
+    height:70px;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    rotate:-5deg;
+    color:#48452a;
+    background-color: #9cc519;
+}
+.box-12{
+    width:80px;
+    height:80px;
+    font-family: "Ewert", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 70px;
+    rotate:-20deg;
+    color:#e9f4c5;
+    background-color: #5b1c51;
+}
+.box-13{
+    width:70px;
+    height:70px;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    rotate:-30deg;
+    color:#dfb435;
+    background-color: #de6782;
+}
+.box-14{
+    height:60px;
+    font-family: "Ewert", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 50px;
+    rotate:20deg;
+    color:#E5E3D4;
+    background-color: #a1558d;
+}
+.box-15{
+    width:100px;
+    height:110px;
+    font-family: "Lobster", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 100px;
+    rotate:10deg;
+    color:#f9c535;
+    background-color: #fae966;
+}
+.box-16{
+    height:70px;
+    font-family: "Cherry Cream Soda", system-ui;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 70px;
+    color:#E5E3D4;
+    background-color: #1C325B;
+}
+.box-17{
+    height:50px;
+    font-family: "Sevillana", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    color:#e5e3d4ba;
+    background-color: #121f38;
+}
+.box-18{
+    height:70px;
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    rotate:-20deg;
+    color: #FC8F54;
+    background-color:#FDE7BB;
+}
+
+.door-image{
+    
+}
