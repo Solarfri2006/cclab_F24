@@ -1,4 +1,3 @@
-
 body {
     background-color:black;
 }
@@ -190,6 +189,75 @@ body {
     background-color:#FDE7BB;
 }
 
-.door-image{
-    
+.introduction h1{
+    margin:50px;
+    font-family: "Cedarville Cursive", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color:whitesmoke
+}
+.introduction p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    text-align: center;
+    color:white
+}
+
+.introduction span{
+    font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+    font-weight: 600;
+}
+
+.door-image {
+    position: absolute; 
+    bottom: 10px;
+    left: 50%;
+    margin-left: -100px; 
+}
+
+.door-image img {
+    width: 200px;
+    height: auto;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1500px;
+    gap:30px;
+}
+
+#room-container{
+    width: 60%;
+    height: 400px;
+    margin-right: 0px;
+    margin-left:300px;
+}
+
+#items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.items {
+    width: 80px;
+    height: 80px;
+    font-size:10px;
+    background-color: #fc8f54;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
 }
