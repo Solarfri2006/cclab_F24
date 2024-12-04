@@ -1,5 +1,8 @@
 body {
     background-color:black;
+    margin:0px;
+    padding:0px;
+    overflow-x: hidden; /**/
 }
 
 .title-container{
@@ -231,33 +234,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 1500px;
-    gap:30px;
+    margin-top: 600px;
+    width:100%;
+    
 }
 
 #room-container{
-    width: 60%;
     height: 400px;
-    margin-right: 0px;
-    margin-left:300px;
-}
-
-#items-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 10px;
-    max-width: 300px;
-}
-
-.items {
-    width: 80px;
-    height: 80px;
-    font-size:10px;
-    background-color: #fc8f54;
-    color: white; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid white;
+    margin-top:20px;
+    padding-top: 20px;
+    width:100%;
 }

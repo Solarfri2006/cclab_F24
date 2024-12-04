@@ -3,11 +3,12 @@ body{
     margin: 0;
  }
  .jacquard-12-regular {
-
-  }
+   
+ }
+ 
 
 #title{
-    font-family: "Jacquard 12", system-ui;
+    font-family: "Jacquard 12", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 10em;
@@ -36,7 +37,7 @@ body{
  }
  .flexbox-content{
     display: flex;
-    justify-content:center;
+    justify-content:space-around;
     width:860;
     margin: auto; /*aligns in the center by default*/
     flex-wrap: wrap;
