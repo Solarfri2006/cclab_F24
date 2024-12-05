@@ -1,6 +1,6 @@
 let clickables = []
 let audios = []
-let images = []
+let clickableImages = []
 let roomBG
 let bed
 let piano
@@ -18,22 +18,24 @@ function preload(){
   lights = loadImage("images/Vintage_Art_Deco_Saturn_Brass_Hanging_Light_Frosted_Star_Glass_Shade_Lamp-removebg-preview.png")
   player = loadImage("images/9_Best_Cassette_Players__Reviews___Guide-removebg-preview.png")
 
-  images.push(loadImage("images/cassette1-removebg-preview.png"))
-  images.push(loadImage("images/cassette2-removebg-preview.png"))
-  images.push(loadImage("images/cassette3-removebg-preview.png"))
-  images.push(loadImage("images/cassette4-removebg-preview.png"))
-  images.push(loadImage("images/cassette5-removebg-preview.png"))
+  audios.push(loadSound("audio/113634__edgardedition__click4.wav"))
+
+  clickableImages.push(loadImage("images/cassette1-removebg-preview.png"))
+  clickableImages.push(loadImage("images/cassette2-removebg-preview.png"))
+  clickableImages.push(loadImage("images/cassette3-removebg-preview.png"))
+  clickableImages.push(loadImage("images/cassette4-removebg-preview.png"))
+  clickableImages.push(loadImage("images/cassette5-removebg-preview.png"))
 
 
 }
 
 class Clickable {
-  constructor(img, x, y, w, h, audio){
-    this.img = img
+  constructor(x, y, w, h, img, audio){
     this.x = x
     this.y = y
     this.w = w
     this.h = h 
+    this.img = img
     this.audio = audio
   }
 
@@ -42,14 +44,23 @@ class Clickable {
   }
 
   isClicked(){
-    this.clicked = mouseX > this.x && mouseX < this.x+this.w && mouseY > this.y && mouseY < this.y+this.h
+    return (mouseX > this.x && mouseX < this.x+this.w && mouseY > this.y && mouseY < this.y+this.h)
+  }
+
+  playAudio(){
+    if (!this.audio.isPlaying()){
+      this.audio.play()
+    }
   }
 }
+
 
 function setup() {
     let canvas=createCanvas(windowWidth, windowHeight);
     canvas.id("p5-canvas")
     canvas.parent("room-container")
+
+    clickables.push(new Clickable(windowWidth*0.5, windowHeight*0.5, windowWidth*0.05, windowHeight*0.05, clickableImages[0], audios[0]))
     
   }
 
@@ -65,9 +76,22 @@ function setup() {
     image(lights, windowWidth * 0.5, -windowHeight*0.05, windowWidth * 0.15, windowHeight * 0.3)
     image(player, windowWidth * 0.65, windowHeight*0.7, windowWidth * 0.07, windowHeight * 0.15)
   
+    for(clickable of clickables){
+      clickable.display()
+    }
+    fill(255, 0, 0, 100);
+    rect(windowWidth * 0.5, windowHeight * 0.5, windowWidth * 0.05, windowHeight * 0.05);
+
   
   
-  
+  }
+
+  function mousePressed(){
+    for (let clickable of clickables){
+      if (clickable.isClicked()){
+        clickable.playAudio()
+      }
+    }
   }
 
   function windowResized(){
