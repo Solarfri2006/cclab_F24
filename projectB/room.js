@@ -149,7 +149,7 @@ function setup() {
     let h = windowHeight*0.4
     image(stickyNotes, windowWidth*0.15, windowHeight*0.1, windowWidth*0.2, windowHeight*0.4)
     if (mouseIsPressed && mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h){
-      window.open("http://www.staggeringbeauty.com/", "_blank", "width:600, height:800")
+      window.open("https://solarfri2006.github.io/cclab_F24/projectB-Stickynotes/", "_blank", "width:600, height:800")
     }
   }
 
