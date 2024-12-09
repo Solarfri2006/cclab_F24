@@ -11,6 +11,7 @@ let player
 let carpet
 let sunflowers
 let frida
+let stickyNotes
 let isAudioPlaying = false
 function preload(){
   roomBG = loadImage("images/room2.jpg")
@@ -23,8 +24,6 @@ function preload(){
   carpet = loadImage("images/sun-rug-under-bed.png")
   sunflowers = loadImage("images/vangogh-sunflowers.png")
   frida = loadImage("images/tree-of-hope-removebg-preview.png")
-
-
   stickyNotes = loadImage("images/sticky_note_wall-removebg-preview.png")
   
 
@@ -34,22 +33,24 @@ function preload(){
   audios.push(loadSound("audio/Both-Sides-Now.mp3"))
   audios.push(loadSound("audio/Let-It-Be.mp3"))
 
+  audios.push(loadSound("audio/pillow-narrative.m4a"))
   audios.push(loadSound("audio/Diary-narrative.m4a"))
   audios.push(loadSound("audio/Mobilephone-narrative.mp3"))
 
 
 
-  clickableImages.push(loadImage("images/cassette1-removebg-preview.png"))
-  clickableImages.push(loadImage("images/cassette2-removebg-preview.png"))
-  clickableImages.push(loadImage("images/cassette3-removebg-preview.png"))
-  clickableImages.push(loadImage("images/cassette4-removebg-preview.png"))
-  clickableImages.push(loadImage("images/cassette5-removebg-preview.png"))
+  clickableImages.push(loadImage("images/cassette1-removebg-preview.png")) //0
+  clickableImages.push(loadImage("images/cassette2-removebg-preview.png")) //1
+  clickableImages.push(loadImage("images/cassette3-removebg-preview.png")) //2
+  clickableImages.push(loadImage("images/cassette4-removebg-preview.png")) //3
+  clickableImages.push(loadImage("images/cassette5-removebg-preview.png")) //4
 
-  clickableImages.push(loadImage("images/slyvia_plath_collected_poems-removebg-preview.png"))
-  clickableImages.push(loadImage("images/Faded_Turkish_Decorative_Pillow-removebg-preview.png"))
-  clickableImages.push(loadImage("images/diary.png"))
-  clickableImages.push(loadImage("images/mobilePhone.png"))
+  clickableImages.push(loadImage("images/slyvia_plath_collected_poems-removebg-preview.png")) //5
+  clickableImages.push(loadImage("images/Faded_Turkish_Decorative_Pillow-removebg-preview.png")) //6
+  clickableImages.push(loadImage("images/diary.png"))//7
+  clickableImages.push(loadImage("images/mobilePhone.png")) //8
 
+  
 
 }
 
@@ -98,10 +99,12 @@ function setup() {
     clickables.push(new Clickable(windowWidth*0.6, windowHeight*0.85, windowWidth*0.04, windowHeight*0.05, clickableImages[3], audios[3]))
     clickables.push(new Clickable(windowWidth*0.6, windowHeight*0.75, windowWidth*0.015, windowHeight*0.05, clickableImages[4], audios[4]))
 
-    clickables.push(new Clickable(windowWidth*0.6, windowHeight*0.5, windowWidth*0.06, windowHeight*0.1, clickableImages[5], audios[6]))
-    clickables.push(new Clickable(windowWidth*0.15, windowHeight*0.5, windowWidth*0.15, windowHeight*0.2, clickableImages[6], audios[6]))
-    clickables.push(new Clickable(windowWidth*0.2, windowHeight*0.85, windowWidth*0.06, windowHeight*0.07, clickableImages[7], audios[5]))
-    clickables.push(new Clickable(windowWidth*0.35, windowHeight*0.6, windowWidth*0.03, windowHeight*0.06, clickableImages[8], audios[6]))
+    clickables.push(new Clickable(windowWidth*0.6, windowHeight*0.5, windowWidth*0.06, windowHeight*0.1, clickableImages[5], audios[6])) //sylviaplath
+    clickables.push(new Clickable(windowWidth*0.15, windowHeight*0.5, windowWidth*0.15, windowHeight*0.2, clickableImages[6], audios[5])) //pillow
+    clickables.push(new Clickable(windowWidth*0.2, windowHeight*0.85, windowWidth*0.06, windowHeight*0.07, clickableImages[7], audios[6])) //mobile phone
+    clickables.push(new Clickable(windowWidth*0.35, windowHeight*0.6, windowWidth*0.03, windowHeight*0.06, clickableImages[8], audios[7])) //diary
+
+    
 
   }
 
@@ -125,6 +128,8 @@ function setup() {
     for(clickable of clickables){
       clickable.display()
     }
+
+    leaveStickyNote()
   
   }
 
@@ -133,6 +138,18 @@ function setup() {
       if (clickable.clicked()){
         clickable.playAudio()
       }
+    }
+
+  }
+
+  function leaveStickyNote(){
+    let x = windowWidth*0.15
+    let y = windowHeight*0.1
+    let w = windowWidth*0.2
+    let h = windowHeight*0.4
+    image(stickyNotes, windowWidth*0.15, windowHeight*0.1, windowWidth*0.2, windowHeight*0.4)
+    if (mouseIsPressed && mouseX > x && mouseX < x+w && mouseY > y && mouseY < y+h){
+      window.open("http://www.staggeringbeauty.com/", "_blank", "width:600, height:800")
     }
   }
 
