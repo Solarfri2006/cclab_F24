@@ -194,13 +194,24 @@ body {
 
 .introduction h1{
     margin:20px;
-    font-family: "Cedarville Cursive", serif;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color:whitesmoke
+}
+
+.introduction h2{
+    margin:20px;
+    font-family:'Courier New', Courier, monospace;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
     text-align: center;
     color:whitesmoke
 }
+
 .introduction p{
     font-family:'Courier New', Courier, monospace;
     font-weight: 400;
@@ -219,14 +230,14 @@ body {
 }
 
 .door-image {
-    position: absolute; 
+    position: relative; 
     bottom: 10px;
     left: 50%;
-    margin-left: -100px; 
+    margin-left: -250px; 
 }
 
 .door-image img {
-    width: 200px;
+    width: 500px;
     height: auto;
 }
 
