@@ -33,6 +33,7 @@ function preload(){
   audios.push(loadSound("audio/Both-Sides-Now.mp3"))
   audios.push(loadSound("audio/Let-It-Be.mp3"))
 
+  audios.push(loadSound("audio/SylviaPlath.mp3"))
   audios.push(loadSound("audio/pillow-narrative.m4a"))
   audios.push(loadSound("audio/Diary-narrative.m4a"))
   audios.push(loadSound("audio/Mobilephone-narrative.mp3"))
@@ -99,10 +100,10 @@ function setup() {
     clickables.push(new Clickable(windowWidth*0.6, windowHeight*0.85, windowWidth*0.04, windowHeight*0.05, clickableImages[3], audios[3]))
     clickables.push(new Clickable(windowWidth*0.6, windowHeight*0.75, windowWidth*0.015, windowHeight*0.05, clickableImages[4], audios[4]))
 
-    clickables.push(new Clickable(windowWidth*0.6, windowHeight*0.5, windowWidth*0.06, windowHeight*0.1, clickableImages[5], audios[6])) //sylviaplath
-    clickables.push(new Clickable(windowWidth*0.15, windowHeight*0.5, windowWidth*0.15, windowHeight*0.2, clickableImages[6], audios[5])) //pillow
-    clickables.push(new Clickable(windowWidth*0.2, windowHeight*0.85, windowWidth*0.06, windowHeight*0.07, clickableImages[7], audios[6])) //mobile phone
-    clickables.push(new Clickable(windowWidth*0.35, windowHeight*0.6, windowWidth*0.03, windowHeight*0.06, clickableImages[8], audios[7])) //diary
+    clickables.push(new Clickable(windowWidth*0.6, windowHeight*0.5, windowWidth*0.06, windowHeight*0.1, clickableImages[5], audios[5])) //sylviaplath
+    clickables.push(new Clickable(windowWidth*0.15, windowHeight*0.5, windowWidth*0.15, windowHeight*0.2, clickableImages[6], audios[6])) //pillow
+    clickables.push(new Clickable(windowWidth*0.2, windowHeight*0.85, windowWidth*0.06, windowHeight*0.07, clickableImages[7], audios[7])) //mobile phone
+    clickables.push(new Clickable(windowWidth*0.35, windowHeight*0.6, windowWidth*0.03, windowHeight*0.06, clickableImages[8], audios[8])) //diary
 
     
 
